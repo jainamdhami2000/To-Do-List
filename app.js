@@ -138,7 +138,7 @@ app.post("/delete", function(req, res) {
       res.redirect("/");
     });
   }else{
-    List.findOneAndUpdate({name:listName},{$pull:{items:{_id:req.body.check}}},function(err,foundlist){
+    List.findOneAndUpdade({name:listName},{$pull:{items:{_id:req.body.check}}},function(err,foundlist){
       if(!err){
         res.redirect("/"+listName);
       }
@@ -147,3 +147,6 @@ app.post("/delete", function(req, res) {
 });
 
 app.listen(3000 || process.env.PORT);
+
+//
+//https://still-coast-26534.herokuapp.com/
