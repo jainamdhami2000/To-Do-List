@@ -12,7 +12,15 @@ app.use(body_parser.urlencoded({
 
 app.use(express.static("public")); //to load css from public basically it will load all files in public
 
-mongoose.connect("mongodb+srv://jainam:jsdjsd2000@cluster0-wy820.mongodb.net/todolistDB", {
+//for mongo atlas
+
+// mongoose.connect("mongodb+srv://jainam:jsdjsd2000@cluster0-wy820.mongodb.net/todolistDB", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
+
+//locally
+mongoose.connect("mongodb://localhost:27017/todolistDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
